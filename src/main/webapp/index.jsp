@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form action="/insertar" method="post">
-		<span>nombre:</span> <input type="text" name="nombre"> <br />
+		<span>nombre:</span> <input type="text" name="name"> <br />
 		<span>apellido:</span> <input type="text" name="apellido"> <br />
 		<input type="submit">
 	</form>

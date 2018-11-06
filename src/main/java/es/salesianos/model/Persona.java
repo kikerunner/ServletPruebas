@@ -6,18 +6,26 @@ public class Persona {
 	private String name;
 	private String Apellido;
 	
+	public void setCodPersona(int codPersona) {
+		this.codPersona = codPersona;
+	}
+
 	public int getCodPersona() {
 		return codPersona;
 	}
+	
 	public String getName() {
 		return name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
+	
 	public String getApellido() {
 		return Apellido;
 	}
+	
 	public void setApellido(String apellido) {
 		Apellido = apellido;
 	}

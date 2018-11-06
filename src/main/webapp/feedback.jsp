@@ -8,6 +8,7 @@
 </head>
 <body>
 	Elemento creado con exito
+	
 	<%
 	System.out.println(request.getParameter("name"));
 	System.out.println(request.getParameter("apellido"));
