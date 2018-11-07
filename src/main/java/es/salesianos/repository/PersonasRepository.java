@@ -2,7 +2,10 @@ package es.salesianos.repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import es.salesianos.connection.AbstractConnection;
 import es.salesianos.connection.H2Connection;
@@ -32,5 +35,34 @@ public class PersonasRepository {
 
 		manager.close(conn);
 	}
+	
+	public List<Persona>searchAll() {
+		List<Persona> personas = new ArrayList<Persona>();
+		Connection conn = manager.open(jdbcUrl);
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+		try {
+			preparedStatement = conn
+					.prepareStatement("SELECT * FROM Personas");
+			resultSet = preparedStatement.executeQuery();
+			while(resultSet.next()) {
+				Persona personaInDatabase = new Persona();
+				personaInDatabase.setCodPersona(resultSet.getInt(1));
+				personaInDatabase.setName(resultSet.getString(2));
+				personaInDatabase.setApellido(resultSet.getString(3));
+				
+				personas.add(personaInDatabase);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} finally {
+			manager.close(preparedStatement);
+		}
 
+		manager.close(conn);
+		return personas;
+		
+	}
+	
 }

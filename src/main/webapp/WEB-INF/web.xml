@@ -3,14 +3,25 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_3_1.xsd"
     version="3.1">
 	<display-name>examenPrueba</display-name>
+	
 	<servlet>
 		<servlet-name>InsertarPersona</servlet-name>
 		<servlet-class>es.salesianos.servlet.InsertarPersona</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>listado</servlet-name>
+		<servlet-class>es.salesianos.model.ListaPersonas</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>InsertarPersona</servlet-name>
 		<url-pattern>/insertar</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>listado</servlet-name>
+		<url-pattern>cargarListado</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>
