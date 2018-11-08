@@ -1,6 +1,7 @@
 /home/kike/GIT/ServletPruebas/src/main/java/service/Service.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/model/Persona.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/connection/H2Connection.java
+/home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/model/EditarPersona.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/repository/PersonasRepository.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/model/ListaPersonas.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/model/PersonaAssembler.java

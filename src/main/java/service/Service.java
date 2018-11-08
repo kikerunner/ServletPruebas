@@ -13,7 +13,7 @@ public class Service {
 		return repository.searchAll();
 	}
 	
-	public Persona searchOnePerson(Integer CodPersona) {
+	public Persona searchOnePerson(int CodPersona) {
 		return repository.selectOnePerson(CodPersona);
 	}
 	

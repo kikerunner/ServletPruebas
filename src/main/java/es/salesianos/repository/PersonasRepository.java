@@ -65,7 +65,7 @@ public class PersonasRepository {
 		
 	}
 	
-	public Persona selectOnePerson(Integer CodPersona) {
+	public Persona selectOnePerson(int CodPersona) {
 		Persona personaInDatabase = null;
 		Connection conn = manager.open(jdbcUrl);
 		PreparedStatement preparedStatement = null;
@@ -74,6 +74,8 @@ public class PersonasRepository {
 			preparedStatement = conn
 					.prepareStatement("SELECT * FROM Personas WHERE CodPersona = ?");
 			preparedStatement.setInt(1, CodPersona);
+			System.out.println("selectOonePerson");
+			System.out.println(CodPersona);
 			resultSet = preparedStatement.executeQuery();
 			while(resultSet.next()) {
 				personaInDatabase = new Persona();
