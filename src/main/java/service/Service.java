@@ -12,5 +12,11 @@ public class Service {
 	public List<Persona> listAllUsers() {
 		return repository.searchAll();
 	}
+	
+	public Persona searchOnePerson(Integer CodPersona) {
+		return repository.selectOnePerson(CodPersona);
+	}
+	
+	
 
 }

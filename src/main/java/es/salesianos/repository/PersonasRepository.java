@@ -65,4 +65,31 @@ public class PersonasRepository {
 		
 	}
 	
+	public Persona selectOnePerson(Integer CodPersona) {
+		Persona personaInDatabase = null;
+		Connection conn = manager.open(jdbcUrl);
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+		try {
+			preparedStatement = conn
+					.prepareStatement("SELECT * FROM Personas WHERE CodPersona = ?");
+			preparedStatement.setInt(1, CodPersona);
+			resultSet = preparedStatement.executeQuery();
+			while(resultSet.next()) {
+				personaInDatabase = new Persona();
+				personaInDatabase.setCodPersona(resultSet.getInt(1));
+				personaInDatabase.setName(resultSet.getString(2));
+				personaInDatabase.setApellido(resultSet.getString(3));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} finally {
+			manager.close(preparedStatement);
+		}
+
+		manager.close(conn);
+		return personaInDatabase;
+	}
+	
 }

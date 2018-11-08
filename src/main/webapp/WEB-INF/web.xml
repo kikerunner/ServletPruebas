@@ -13,10 +13,20 @@
 		<servlet-name>listado</servlet-name>
 		<servlet-class>es.salesianos.model.ListaPersonas</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>editar</servlet-name>
+		<servlet-class>es.salesianos.model.editarPersona</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>InsertarPersona</servlet-name>
-		<url-pattern>/insertar</url-pattern>
+		<url-pattern>insertar</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>editarPersona</servlet-name>
+		<url-pattern>editar</url-pattern>
 	</servlet-mapping>
 	
 	<servlet-mapping>
