@@ -94,4 +94,25 @@ public class PersonasRepository {
 		return personaInDatabase;
 	}
 	
+	public Persona updatePerson(Persona persona) {
+		Persona personaInDatabase = null;
+		Connection conn = manager.open(jdbcUrl);
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+		try {
+			preparedStatement = conn
+					.prepareStatement("UPDATE Personas SET nombre = ?, apellido = ? WHERE CodPersona = ?");
+			preparedStatement.setString(1, persona.getName());
+			preparedStatement.setString(2, persona.getApellido());
+			preparedStatement.setInt(3, persona.getCodPersona());
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} finally {
+			manager.close(preparedStatement);
+		}
+		manager.close(conn);
+		return personaInDatabase;
+	}
+	
 }
