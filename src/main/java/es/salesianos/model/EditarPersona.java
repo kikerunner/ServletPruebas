@@ -15,22 +15,12 @@ public class EditarPersona extends HttpServlet{
 	
 	private Service servicio = new Service();
 	private PersonasRepository repo = new PersonasRepository();
+	private PersonaAssembler personaAssembler = new PersonaAssembler();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		Persona personaFormulario = new Persona();
-		Persona personaEnDatabase = new Persona();
-		String id = req.getParameter("CodPersona");
-		System.out.println("En doGet");
-		System.out.println(id);
-		if(null != id) {
-			personaFormulario.setCodPersona(Integer.parseInt(id));
-		}
-		String name = req.getParameter("name");
-		String apellido = req.getParameter("apellido");
-		personaFormulario.setName(name);
-		personaFormulario.setApellido(apellido);
-		personaEnDatabase = servicio.searchOnePerson(personaFormulario.getCodPersona());
+		Persona personaFormulario = personaAssembler.assembleUserFrom(req);
+		Persona personaEnDatabase = servicio.searchOnePerson(personaFormulario.getCodPersona());
 		req.setAttribute("personaEditar", personaEnDatabase);
 		redirect(req, resp);
 	}

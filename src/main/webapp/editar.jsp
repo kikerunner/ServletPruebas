@@ -11,8 +11,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/insertar" method="post">
-		<span>ID:</span> <input type="text" name="CodPersona" value="<c:out value="${personaEditar.CodPersona}"/>"> <br />
+<form action="/updatePersona" method="post">
+		<span>ID:</span> <input type="text" name="CodPersona" value="<c:out value="${personaEditar.codPersona}"/>"> <br />
 		<span>nombre:</span> <input type="text" name="name" value="<c:out value="${personaEditar.name}"/>"> <br />
 		<span>apellido:</span> <input type="text" name="apellido" value="<c:out value="${personaEditar.apellido}"/>"> <br />
 		<input type="submit">

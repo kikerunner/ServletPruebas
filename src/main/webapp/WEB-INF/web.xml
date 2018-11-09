@@ -18,6 +18,11 @@
 		<servlet-name>EditarPersona</servlet-name>
 		<servlet-class>es.salesianos.model.EditarPersona</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>UpdatePersona</servlet-name>
+		<servlet-class>es.salesianos.model.UpdatePersona</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>InsertarPersona</servlet-name>
@@ -32,6 +37,11 @@
 	<servlet-mapping>
 		<servlet-name>listado</servlet-name>
 		<url-pattern>cargarListado</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>UpdatePersona</servlet-name>
+		<url-pattern>updatePersona</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>
