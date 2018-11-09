@@ -17,8 +17,8 @@ public class Service {
 		return repository.selectOnePerson(CodPersona);
 	}
 	
-	public Persona updatePerson(Persona persona) {
-		return repository.updatePerson(persona);
+	public void updatePerson(Persona persona) {
+		repository.updatePerson(persona);
 	}
 
 }

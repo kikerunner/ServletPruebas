@@ -18,7 +18,9 @@ public class UpdatePersona extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Persona persona = PersonaAssembler.assembleUserFrom(req);
+		System.out.println(persona.getCodPersona());
 		System.out.println(persona.getName());
+		System.out.println(persona.getApellido());
 		servicio.updatePerson(persona);	
 		redirect(req, resp);
 	}
