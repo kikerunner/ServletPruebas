@@ -1,14 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Welcome page</title>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
-Bienvenido
-<b><%= request.getParameter("nombre") %></b>
-<b><%= request.getParameter("apellido") %></b>
+	Elemento creado con exito
+	<br>
+	<b><%= request.getParameter("name") %></b>
+	<b><%= request.getParameter("apellido") %></b><br>
+	<a href="/ListarPersonas.jsp"> Ir a la lista</a><br>
+	<a href="/index.jsp"> Insertar más personas</a><br>
+	
+	
 </body>
 </html>

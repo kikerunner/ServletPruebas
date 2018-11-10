@@ -23,6 +23,11 @@
 		<servlet-name>UpdatePersona</servlet-name>
 		<servlet-class>es.salesianos.model.UpdatePersona</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>BorrarPersona</servlet-name>
+		<servlet-class>es.salesianos.model.BorrarPersona</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>InsertarPersona</servlet-name>
@@ -32,6 +37,11 @@
 	<servlet-mapping>
 		<servlet-name>EditarPersona</servlet-name>
 		<url-pattern>editar</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>BorrarPersona</servlet-name>
+		<url-pattern>borrar</url-pattern>
 	</servlet-mapping>
 	
 	<servlet-mapping>

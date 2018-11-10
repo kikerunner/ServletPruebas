@@ -12,5 +12,6 @@
 		<span>apellido:</span> <input type="text" name="apellido"> <br />
 		<input type="submit">
 	</form>
+	<a href="/ListarPersonas.jsp"> Ir a la lista</a><br>
 </body>
 </html>

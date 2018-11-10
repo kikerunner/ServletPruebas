@@ -113,4 +113,22 @@ public class PersonasRepository {
 		
 	}
 	
+	public void borrarPersona(Persona persona) {
+		Connection conn = manager.open(jdbcUrl);
+		PreparedStatement preparedStatement = null;
+		try {
+			preparedStatement = conn
+					.prepareStatement("DELETE FROM PERSONAS WHERE CodPersona = ?");	
+			preparedStatement.setInt(1, persona.getCodPersona());
+			
+			preparedStatement.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} finally {
+			manager.close(preparedStatement);
+			manager.close(conn);
+		}
+	}
+	
 }

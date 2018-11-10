@@ -7,12 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	Elemento creado con exito
-	
-	<%
-	System.out.println(request.getParameter("name"));
-	System.out.println(request.getParameter("apellido"));
-	%>
-	
+	Borrado con éxito
+	<a href="/ListarPersonas.jsp"> Volver a la lista</a>
 </body>
 </html>

@@ -20,5 +20,9 @@ public class Service {
 	public void updatePerson(Persona persona) {
 		repository.updatePerson(persona);
 	}
+	
+	public void borrarPersona(Persona persona) {
+		repository.borrarPersona(persona);
+	}
 
 }

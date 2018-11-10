@@ -21,7 +21,7 @@ public class InsertarPersona extends HttpServlet{
 		persona.setName(req.getParameter("name"));
 		persona.setApellido(req.getParameter("apellido"));
 		repository.insert(persona);
-		redirect(req, resp, "/feedback.jsp");
+		redirect(req, resp, "/insertar.jsp");
 	}
 	
 	protected void redirect(HttpServletRequest req, HttpServletResponse resp, String jsp) throws IOException, ServletException {
