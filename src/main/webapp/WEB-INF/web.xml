@@ -25,6 +25,11 @@
 	</servlet>
 	
 	<servlet>
+		<servlet-name>AddPet</servlet-name>
+		<servlet-class>es.salesianos.servlet.AddPet</servlet-class>
+	</servlet>
+	
+	<servlet>
 		<servlet-name>BorrarPersona</servlet-name>
 		<servlet-class>es.salesianos.servlet.BorrarPersona</servlet-class>
 	</servlet>
@@ -43,6 +48,12 @@
 		<servlet-name>BorrarPersona</servlet-name>
 		<url-pattern>borrar</url-pattern>
 	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AddPet</servlet-name>
+		<url-pattern>addPet</url-pattern>
+	</servlet-mapping>
+	
 	
 	<servlet-mapping>
 		<servlet-name>listado</servlet-name>

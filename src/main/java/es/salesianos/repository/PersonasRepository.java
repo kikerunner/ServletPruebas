@@ -9,6 +9,7 @@ import java.util.List;
 
 import es.salesianos.connection.AbstractConnection;
 import es.salesianos.connection.H2Connection;
+import es.salesianos.model.Mascota;
 import es.salesianos.model.Persona;
 
 public class PersonasRepository {
@@ -25,6 +26,25 @@ public class PersonasRepository {
 					.prepareStatement("INSERT INTO PERSONAS(nombre,apellido) VALUES (?, ?)");
 			preparedStatement.setString(1, persona.getName());
 			preparedStatement.setString(2, persona.getApellido());
+			preparedStatement.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} finally {
+			manager.close(preparedStatement);
+		}
+
+		manager.close(conn);
+	}
+	
+	public void insertPet(Mascota mascota) {
+		Connection conn = manager.open(jdbcUrl);
+		PreparedStatement preparedStatement = null;
+		try {
+			preparedStatement = conn
+					.prepareStatement("INSERT INTO MASCOTAS(nomMascota,CodPersona) VALUES (?, ?)");
+			preparedStatement.setString(1, mascota.getNomMascota());
+			preparedStatement.setInt(2, mascota.getCodPersona());
 			preparedStatement.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

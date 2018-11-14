@@ -35,6 +35,7 @@ List<Persona> personas = (List<Persona>)request.getAttribute("listAllPersonas");
 			<td>Apellido</td>
 			<td>Editar</td>
 			<td>Borrar</td>
+			<td>Añadir Mascota</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -46,6 +47,7 @@ List<Persona> personas = (List<Persona>)request.getAttribute("listAllPersonas");
 				<td><c:out value="${persona.apellido}"/> </td>
 				<td><a href="/editar?codPersona=${persona.codPersona}">EDIT</a> </td>
 				<td><a href="/borrar?codPersona=${persona.codPersona}">DELETE</a> </td>
+				<td><a href="/addPet?codPersona=${persona.codPersona}">DELETE</a> </td>
 	    	</tr>
 		</c:forEach>
 	</tbody>
