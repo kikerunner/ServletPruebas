@@ -33,6 +33,16 @@
 		<servlet-name>BorrarPersona</servlet-name>
 		<servlet-class>es.salesianos.servlet.BorrarPersona</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>BuscarPet</servlet-name>
+		<servlet-class>es.salesianos.servlet.BuscarPet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>BuscarPet</servlet-name>
+		<url-pattern>buscarPet</url-pattern>
+	</servlet-mapping>
 
 	<servlet-mapping>
 		<servlet-name>InsertarPersona</servlet-name>

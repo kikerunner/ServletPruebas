@@ -73,6 +73,18 @@ public class PersonasRepository {
 				
 				personas.add(personaInDatabase);
 			}
+			for (Persona persona : personas) {
+				
+				preparedStatement = conn.prepareStatement(
+						"SELECT * FROM MASCOTAS where codPersona="+persona.getCodPersona());
+				resultSet = preparedStatement.executeQuery();
+				while (resultSet.next()) {
+					Mascota pet = new Mascota();
+					pet.setNomMascota(resultSet.getString(1));
+					pet.setCodPersona(resultSet.getInt(2));
+					persona.getMascotas().add(pet);
+				}
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);

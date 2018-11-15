@@ -13,5 +13,6 @@
 		<input type="submit">
 	</form>
 	<a href="/ListarPersonas.jsp"> Ir a la lista</a><br>
+	<a href="/ListarMascotas.jsp"> Buscar mascota</a><br>
 </body>
 </html>

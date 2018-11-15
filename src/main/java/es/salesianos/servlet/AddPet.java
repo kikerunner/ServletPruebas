@@ -13,11 +13,12 @@ import es.salesianos.model.Persona;
 import es.salesianos.model.PersonaAssembler;
 import es.salesianos.model.PetAssembler;
 import es.salesianos.repository.PersonasRepository;
+import es.salesianos.repository.PetRepository;
 import service.Service;
 
 public class AddPet extends HttpServlet{
 	
-	PersonasRepository repository = new PersonasRepository();
+	PetRepository repository = new PetRepository();
 	Service servicio = new Service();
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
