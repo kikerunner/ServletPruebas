@@ -40,22 +40,21 @@ public class PetRepository {
 		manager.close(conn);
 	}
 	
-	public List<Persona>selectAllMascotasByPersona(String nomMascota){
-		List<Persona> personas = new ArrayList<Persona>();
+	public Persona selectAllMascotasByPersona(String nomMascota){
 		Connection conn = manager.open(jdbcUrl);
 		PreparedStatement preparedStatement = null;
 		ResultSet resultSet = null;
 		try {
 			preparedStatement = conn
-					.prepareStatement("SELECT p.nombre, p.apellido FROM Mascotas AS m, Personas as p WHERE m.nomMascota = ?");
+					.prepareStatement("SELECT p.CodPersona, p.nombre, p.apellido FROM Mascotas AS m, Personas as p WHERE m.nomMascota = ?");
 			preparedStatement.setString(1, nomMascota);
 			resultSet = preparedStatement.executeQuery();
 			while(resultSet.next()) {
 				personaendatabase = new Persona();
-				personaendatabase.setName(resultSet.getString(1));
-				personaendatabase.setApellido(resultSet.getString(2));
+				personaendatabase.setCodPersona(resultSet.getInt(1));
+				personaendatabase.setName(resultSet.getString(2));
+				personaendatabase.setApellido(resultSet.getString(3));
 				
-				personas.add(personaendatabase);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -65,7 +64,7 @@ public class PetRepository {
 		}
 
 		manager.close(conn);
-		return personas;
+		return personaendatabase;
 	}
 	
 	public Persona selectOnePet(int CodPersona) {

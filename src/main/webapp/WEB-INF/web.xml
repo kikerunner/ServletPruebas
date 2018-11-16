@@ -41,7 +41,7 @@
 	
 	<servlet-mapping>
 		<servlet-name>BuscarPet</servlet-name>
-		<url-pattern>buscarPet</url-pattern>
+		<url-pattern>ListarMascotas</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
