@@ -41,12 +41,13 @@ public class PetRepository {
 	}
 	
 	public Persona selectAllMascotasByPersona(String nomMascota){
+		Persona personaendatabase = null;
 		Connection conn = manager.open(jdbcUrl);
 		PreparedStatement preparedStatement = null;
 		ResultSet resultSet = null;
 		try {
 			preparedStatement = conn
-					.prepareStatement("SELECT p.CodPersona, p.nombre, p.apellido FROM Mascotas AS m, Personas as p WHERE m.nomMascota = ?");
+					.prepareStatement("SELECT p.CodPersona, p.nombre, p.apellido FROM Mascotas AS m, Personas as p WHERE p.codPersona = m.codPersona AND m.nomMascota = ?");
 			preparedStatement.setString(1, nomMascota);
 			resultSet = preparedStatement.executeQuery();
 			while(resultSet.next()) {
