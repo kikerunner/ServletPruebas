@@ -20,8 +20,8 @@ public class Service {
 		return repository.selectOnePerson(CodPersona);
 	}
 	
-	public Persona listMascotaByPersona(String nomMascota) {
-		return repoPet.selectAllMascotasByPersona(nomMascota);
+	public Persona findOwnerByPet(String nomMascota) {
+		return repoPet.selectOwnerByPet(nomMascota);
 	}
 	
 	public void updatePerson(Persona persona) {

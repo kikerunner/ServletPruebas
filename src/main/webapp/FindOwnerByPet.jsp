@@ -11,14 +11,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/ListarMascotas" method="post">
+	<form action="/FindOwnerByPet" method="post">
 		<span>nombre Mascota:</span> <input type="text" name="namePet"> <br />
 		<input type="submit">
 	</form>
 	<% 
-	Persona personas = (Persona)request.getAttribute("listDuenos");
+	Persona persona = (Persona)request.getAttribute("listDuenos");
 	
-	pageContext.setAttribute("personas", personas);
+	pageContext.setAttribute("persona", persona);
 	%>
 
 <table border="1">
@@ -31,9 +31,9 @@
 	</thead>
 	<tbody>
 			<tr>
-				<td><c:out value="${personas.codPersona}"/> </td>
-				<td><c:out value="${personas.name}"/> </td>
-				<td><c:out value="${personas.apellido}"/> </td>
+				<td><c:out value="${persona.codPersona}"/> </td>
+				<td><c:out value="${persona.name}"/> </td>
+				<td><c:out value="${persona.apellido}"/> </td>
 	    	</tr>
 	</tbody>
 </table>

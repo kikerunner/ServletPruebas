@@ -40,7 +40,7 @@ public class PetRepository {
 		manager.close(conn);
 	}
 	
-	public Persona selectAllMascotasByPersona(String nomMascota){
+	public Persona selectOwnerByPet(String nomMascota){
 		Persona personaendatabase = null;
 		Connection conn = manager.open(jdbcUrl);
 		PreparedStatement preparedStatement = null;
