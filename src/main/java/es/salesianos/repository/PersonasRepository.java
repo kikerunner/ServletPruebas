@@ -148,16 +148,23 @@ public class PersonasRepository {
 	public void borrarPersona(Persona persona) {
 		Connection conn = manager.open(jdbcUrl);
 		PreparedStatement preparedStatement = null;
+		PreparedStatement preparedStatement2 = null;
 		try {
 			preparedStatement = conn
 					.prepareStatement("DELETE FROM PERSONAS WHERE CodPersona = ?");	
 			preparedStatement.setInt(1, persona.getCodPersona());
 			
+			preparedStatement2 = conn
+					.prepareStatement("DELETE FROM MASCOTAS WHERE CodPersona = ?");	
+			preparedStatement2.setInt(1, persona.getCodPersona());
+			
+			preparedStatement2.executeUpdate();
 			preparedStatement.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		} finally {
+			manager.close(preparedStatement2);
 			manager.close(preparedStatement);
 			manager.close(conn);
 		}

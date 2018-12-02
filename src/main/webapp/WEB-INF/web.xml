@@ -39,6 +39,13 @@
 		<servlet-class>es.salesianos.servlet.BuscarOwner</servlet-class>
 	</servlet>
 	
+	<servlet>
+		<servlet-name>confirmationDelete</servlet-name>
+		<servlet-class>es.salesianos.servlet.confirmationDelete</servlet-class>
+	</servlet>
+	
+	
+	
 	<servlet-mapping>
 		<servlet-name>BuscarOwner</servlet-name>
 		<url-pattern>FindOwnerByPet</url-pattern>
@@ -57,6 +64,11 @@
 	<servlet-mapping>
 		<servlet-name>BorrarPersona</servlet-name>
 		<url-pattern>borrar</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>confirmationDelete</servlet-name>
+		<url-pattern>confirmarDelete</url-pattern>
 	</servlet-mapping>
 	
 	<servlet-mapping>
