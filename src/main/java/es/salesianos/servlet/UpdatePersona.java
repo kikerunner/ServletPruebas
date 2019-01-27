@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import es.salesianos.model.Persona;
-import es.salesianos.model.PersonaAssembler;
+import es.salesianos.model.assembler.PersonaAssembler;
 import service.Service;
 
 public class UpdatePersona extends HttpServlet{

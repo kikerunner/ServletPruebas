@@ -1,6 +1,8 @@
-package es.salesianos.model;
+package es.salesianos.model.assembler;
 
 import javax.servlet.http.HttpServletRequest;
+
+import es.salesianos.model.Mascota;
 
 public class PetAssembler {
 	public static Mascota assemblerPetFrom(HttpServletRequest req) {

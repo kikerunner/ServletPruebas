@@ -1,6 +1,8 @@
-package es.salesianos.model;
+package es.salesianos.model.assembler;
 
 import javax.servlet.http.HttpServletRequest;
+
+import es.salesianos.model.Persona;
 
 public class PersonaAssembler {
 
