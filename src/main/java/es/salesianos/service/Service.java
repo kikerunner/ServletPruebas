@@ -1,12 +1,15 @@
-package service;
+package es.salesianos.service;
 
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import es.salesianos.model.Mascota;
 import es.salesianos.model.Persona;
 import es.salesianos.repository.PersonasRepository;
 import es.salesianos.repository.PetRepository;
 
+@org.springframework.stereotype.Service("servicePrueba")
 public class Service {
 	
 	PersonasRepository repository = new PersonasRepository();
