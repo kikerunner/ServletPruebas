@@ -16,16 +16,6 @@
 	<input type="submit" value="ver listado">
 
 </form>
-
-
-<%
-
-List<Persona> personas = (List<Persona>)request.getAttribute("listAllPersonas");
-
- pageContext.setAttribute("personas", personas);
-
-%>
-
 <table border="1">
 
 	<thead>
@@ -41,7 +31,7 @@ List<Persona> personas = (List<Persona>)request.getAttribute("listAllPersonas");
 	</thead>
 	<tbody>
 
-		<c:forEach var="persona" items="${listAllPersonas}">
+		<c:forEach var="persona" items="${cargarListado}">
 			<tr>
 				<td><c:out value="${persona.codPersona}"/> </td>
 				<td><c:out value="${persona.name}"/> </td>

@@ -15,12 +15,6 @@
 		<span>nombre Mascota:</span> <input type="text" name="namePet"> <br />
 		<input type="submit">
 	</form>
-	<% 
-	Persona persona = (Persona)request.getAttribute("listDuenos");
-	
-	pageContext.setAttribute("persona", persona);
-	%>
-
 <table border="1">
 	<thead>
 		<tr>

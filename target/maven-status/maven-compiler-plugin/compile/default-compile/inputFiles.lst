@@ -3,12 +3,11 @@
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/model/assembler/PersonaAssembler.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/model/Persona.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/repository/PersonasRepository.java
-/home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/controller/BorrarPersona.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/repository/PetRepository.java
-/home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/controller/AddPet.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/model/Mascota.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/connection/H2Connection.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/model/assembler/PetAssembler.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/controller/ListaPersonas.java
+/home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/controller/BuscarOwner.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/controller/MyErrorController.java
 /home/kike/GIT/ServletPruebas/src/main/java/es/salesianos/connection/AbstractConnection.java

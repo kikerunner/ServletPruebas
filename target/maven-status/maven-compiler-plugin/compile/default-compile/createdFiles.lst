@@ -1,9 +1,7 @@
 es/salesianos/model/Persona.class
 es/salesianos/repository/PersonasRepository.class
-es/salesianos/controller/BorrarPersona.class
 es/salesianos/model/Mascota.class
 es/salesianos/repository/PetRepository.class
-es/salesianos/controller/AddPet.class
 es/salesianos/model/assembler/PersonaAssembler.class
 es/salesianos/demo/DemoApplication.class
 es/salesianos/model/assembler/PetAssembler.class
