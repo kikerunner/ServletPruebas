@@ -12,7 +12,7 @@
 		<span>apellido:</span> <input type="text" name="apellido"> <br />
 		<input type="submit">
 	</form>
-	<a href="/ListarPersonas.jsp"> Ir a la lista</a><br>
-	<a href="/FindOwnerByPet.jsp"> Buscar mascota</a><br>
+	<a href="listarPersonas"> Ir a la lista</a><br>
+	<a href="FindOwnerByPet"> Buscar mascota</a><br>
 </body>
 </html>
