@@ -1,9 +1,9 @@
-es/salesianos/model/Persona.class
 es/salesianos/repository/PersonasRepository.class
+es/salesianos/model/Persona.class
 es/salesianos/model/Mascota.class
 es/salesianos/repository/PetRepository.class
-es/salesianos/model/assembler/PersonaAssembler.class
 es/salesianos/demo/DemoApplication.class
+es/salesianos/model/assembler/PersonaAssembler.class
 es/salesianos/model/assembler/PetAssembler.class
 es/salesianos/connection/H2Connection.class
 es/salesianos/connection/AbstractConnection.class

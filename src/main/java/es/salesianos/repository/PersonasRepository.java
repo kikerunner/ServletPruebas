@@ -7,11 +7,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import es.salesianos.connection.AbstractConnection;
 import es.salesianos.connection.H2Connection;
 import es.salesianos.model.Mascota;
 import es.salesianos.model.Persona;
 
+@Repository
 public class PersonasRepository {
 
 	private static final String jdbcUrl = "jdbc:h2:file:./src/main/resources/test;INIT=RUNSCRIPT FROM 'classpath:scripts/create.sql'";

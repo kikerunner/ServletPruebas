@@ -31,6 +31,10 @@ public class Service {
 		repository.updatePerson(persona);
 	}
 	
+	public void insert(Persona persona) {
+		repository.insert(persona);
+	}
+	
 	public void borrarPersona(Persona persona) {
 		repository.borrarPersona(persona);
 	}
