@@ -12,10 +12,10 @@
 </head>
 <body>
 <div>¿Está usted seguro de Borrar a Esta Persona? (BORRARÁ LA MASCOTA ASOCIADA EN CASCADA)</div> 
-<form action="/borrar" method="get">
-		<span>ID:</span> <input type="text" name="codPersona" value="<c:out value="${personaToBorrar.codPersona}"/>"> <br />
-		<span>nombre:</span> <input type="text" name="name" value="<c:out value="${personaToBorrar.name}"/>"> <br />
-		<span>apellido:</span> <input type="text" name="apellido" value="<c:out value="${personaToBorrar.apellido}"/>"> <br />
+<form action="/borrar" method="post">
+		<span>ID:</span> <input type="text" name="codPersona" value="<c:out value="${persona.codPersona}"/>"> <br />
+		<span>nombre:</span> <input type="text" name="name" value="<c:out value="${persona.name}"/>"> <br />
+		<span>apellido:</span> <input type="text" name="apellido" value="<c:out value="${persona.apellido}"/>"> <br />
 		<input type="submit">
 	</form>
 </body>

@@ -8,6 +8,6 @@
 </head>
 <body>
 	Actualizado con éxito
-	<a href="/ListarPersonas.jsp"> Volver a la lista</a>
+	<a href="listarPersonas"> Volver a la lista</a>
 </body>
 </html>

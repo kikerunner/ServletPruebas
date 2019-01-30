@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import es.salesianos.model.Mascota;
 import es.salesianos.model.Persona;
 import es.salesianos.service.Service;
 

@@ -11,7 +11,7 @@
 	<br>
 	<b><%= request.getParameter("namePet") %></b>
 	<b><%= request.getParameter("codPersona") %></b><br>
-	<a href="/ListarPersonas.jsp"> Ir a la lista</a><br>
+	<a href="listarPersonas"> Ir a la lista</a><br>
 	<a href="/index.jsp"> Insertar más personas</a><br>
 	
 	

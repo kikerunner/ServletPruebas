@@ -37,7 +37,10 @@ public class AddPet {
 	}
 	
 	@PostMapping("/addPet")
-	protected String createPet(Mascota mascota) {	
+	protected String createPet(@RequestParam int codPersona, String namePet) {	
+		Mascota mascota = new Mascota();
+		mascota.setCodPersona(codPersona);
+		mascota.setNomMascota(namePet);
 		repository.insertPet(mascota);
 		return "insertarPet";
 	}
