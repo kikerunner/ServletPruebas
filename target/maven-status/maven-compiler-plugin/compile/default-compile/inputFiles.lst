@@ -1,6 +1,7 @@
 /home/salesianos/GIT/ServletPruebas/src/main/java/es/salesianos/repository/PersonasRepository.java
 /home/salesianos/GIT/ServletPruebas/src/main/java/es/salesianos/service/Service.java
 /home/salesianos/GIT/ServletPruebas/src/main/java/es/salesianos/model/Mascota.java
+/home/salesianos/GIT/ServletPruebas/src/main/java/es/salesianos/controller/AddPet.java
 /home/salesianos/GIT/ServletPruebas/src/main/java/es/salesianos/demo/DemoApplication.java
 /home/salesianos/GIT/ServletPruebas/src/main/java/es/salesianos/model/assembler/PetAssembler.java
 /home/salesianos/GIT/ServletPruebas/src/main/java/es/salesianos/model/assembler/PersonaAssembler.java

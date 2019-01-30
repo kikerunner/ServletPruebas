@@ -13,9 +13,9 @@
 </head>
 <body>
 <form action="/addPet" method="post">
-		<span style="display:none">id:</span> <input type="text" name="codPersona"  value="<c:out value="${ownerPet.codPersona}"/>" style="display:none"> <br />
-		<span>nombre:</span> <input type="text" name="name" value="<c:out value="${ownerPet.name}"/>"> <br />
-		<span>apellido:</span> <input type="text" name="apellido" value="<c:out value="${ownerPet.apellido}"/>"> <br />
+		<span style="display:none">id:</span> <input type="text" name="codPersona"  value="<c:out value="${persona.codPersona}"/>" style="display:none"> <br />
+		<span>nombre:</span> <input type="text" name="name" value="<c:out value="${persona.name}"/>"> <br />
+		<span>apellido:</span> <input type="text" name="apellido" value="<c:out value="${persona.apellido}"/>"> <br />
 		<span>Nombre Mascota:</span> <input type="text" name="namePet"> <br />
 		<input type="submit">
 	</form>
