@@ -12,9 +12,9 @@
 </head>
 <body>
 <form action="/updatePersona" method="post">
-		<span>ID:</span> <input type="text" name="codPersona" value="<c:out value="${personaEditar.codPersona}"/>"> <br />
-		<span>nombre:</span> <input type="text" name="name" value="<c:out value="${personaEditar.name}"/>"> <br />
-		<span>apellido:</span> <input type="text" name="apellido" value="<c:out value="${personaEditar.apellido}"/>"> <br />
+		<span>ID:</span> <input type="text" name="codPersona" value="<c:out value="${persona.codPersona}"/>"> <br />
+		<span>nombre:</span> <input type="text" name="name" value="<c:out value="${persona.name}"/>"> <br />
+		<span>apellido:</span> <input type="text" name="apellido" value="<c:out value="${persona.apellido}"/>"> <br />
 		<input type="submit">
 	</form>
 </body>
